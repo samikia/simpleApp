@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee shop☕</title>
+  </head>
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 60px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(
+        to right,
+        #f8ede3 0%,
+        #dfd3c3 30%,
+        #d0b8a8 60%
+      );
+    }
+
+    .post {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      display: flex;
+      margin-left: 5px;
+      border-radius: 4px;
+      border-color: #85586f;
+      border-style: solid;
+      max-width: 90%;
+    }
+    h1 {
+      text-align: center;
+      border: 1px solid #85586f;
+      background-color: #85586f;
+      color: #f8ede3;
+      padding: 20px;
+      margin: 20px 50px;
+      border-radius: 4px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .textImg {
+      text-align: center;
+      margin: 8px 15px;
+      line-height: 25px;
+      font-weight: 20px;
+    }
+    button {
+      display: block;
+      color: #f8ede3;
+      font-size: 15px;
+      padding: 25px 35px;
+      margin: 30px auto;
+      background-color: #85586f;
+      border-color: #d0b8a8;
+      border-radius: 25px;
+      border-style: groove;
+      box-shadow: 0px 4px 4px 0 rgb(154, 150, 150);
+      border: 0.5px solid #d0b8a8;
+      transition: all 200ms ease;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #dfd3c3;
+      color: #85586f;
+      border: 2px solid #85586f;
+    }
+
+    h3 {
+      text-align: center;
+      border: 1px solid #85586f;
+      border-radius: 4px;
+      margin: 20px 150px;
+      padding: 10px;
+    }
+    .footer {
+      text-align: center;
+    }
+    a {
+      color: #85586f;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Coffee Lover shop☕</h1>
+      <h2>COFFEE IT IS A WAY TO <span>CELEBRATE</span> MY FRIENDSHIPS</h2>
+      <hr />
+      <div class="post">
+        <img
+          src="https://gentwenty.com/wp-content/uploads/2022/09/nathan-dumlao-zUNs99PGDg0-unsplash-1024x1536.jpg.webp"
+          alt="coffee lover"
+          width="300px"
+          height="350px"
+        />
+        <p class="textImg">
+          “YOU KNOW I'M A COFFEE-LOVER. HAVING COFFEE IT'S A KIND OF DAILY
+          RITUAL THAT IS DONE WITH MY FRIENDS, MY FAMILY AND MORE OFTEN - WITH
+          MYSELF, WHEN I'M ALONE AT HOME WITH BOOKS AND MUSIC.
+        </p>
+      </div>
+
+      <h4>9 Unique Benefits of Coffee</h4>
+      <p>
+        Coffee does more than boost your energy. A few daily cups of coffee may
+        also lower your risk of type 2 diabetes and depression, support weight
+        management, and help you live a longer life. Just keep in mind that
+        experts recommend limiting caffeine if you're pregnant or nursing.
+      </p>
+      <a
+        href="https://www.healthline.com/nutrition/top-evidence-based-health-benefits-of-coffee"
+        target="_blank"
+        ><em>read more</em></a
+      >
+      <br />
+      <button>Order your coffee ☕</button>
+      <h3>Thanks for your order,it will be deliver soon</h3>
+      <hr />
+      <p class="footer">
+        This page was built by
+        <span
+          ><a
+            href="https://www.linkedin.com/in/sami-kia-a93a43122/"
+            target="_blank"
+          >
+            samira Kian</a
+          ></span
+        >
+      </p>
+    </div>
+    <script>
+      function information() {
+        let name = prompt("What is your name?");
+        let order = prompt("What is your order?").toLowerCase();
+        let h3 = document.querySelector("h3");
+        if (
+          order === "espresso" ||
+          order === "cappucino" ||
+          order === "mocha"
+        ) {
+          h3.innerHTML = `${name} thanks for your order, your ${order} will be deliver soon`;
+        } else {
+          alert("please select one of these, espresso,cappucino or mocha");
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", information);
+    </script>
+  </body>
+</html>
